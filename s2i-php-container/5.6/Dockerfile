@@ -74,7 +74,7 @@ chmod -R a+rwx /opt/app-root/services.sh
 
 #Install saprfc       
 RUN yum install -y tar
-RUN cp /opt/app-root/etc/conf.d/sap/saprfc-1.4.1.tar.gz /usr/local/saprfc-1.4.1.tar.gz
+RUN cp /opt/app-root/etc/conf.d/oracle/saprfc-1.4.1.tar.gz /usr/local/saprfc-1.4.1.tar.gz
 RUN tar -xvzf /usr/local/saprfc-1.4.1.tar.gz /usr/local && phpize && ./configure \
     && make && make install \
     && echo 'extension=saprfc.so' > /etc/php.d/php.ini
